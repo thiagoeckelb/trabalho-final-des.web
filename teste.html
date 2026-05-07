@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Porsche Brasil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Porsche+Next:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="none" stroke="#D5001C" stroke-width="3"/>
+      <circle cx="50" cy="50" r="36" fill="none" stroke="#D5001C" stroke-width="1.5"/>
+      <text x="50" y="38" text-anchor="middle" font-size="11" fill="#D5001C" font-family="Helvetica" font-weight="bold" letter-spacing="1">PORSCHE</text>
+      <!-- simplified crest lines -->
+      <line x1="50" y1="14" x2="50" y2="86" stroke="#D5001C" stroke-width="1.2"/>
+      <line x1="14" y1="50" x2="86" y2="50" stroke="#D5001C" stroke-width="1.2"/>
+    </svg>
+    <span>Porsche</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Modelos</a></li>
+    <li><a href="#">Configurador</a></li>
+    <li><a href="#">Concessionárias</a></li>
+    <li><a href="#">Serviços</a></li>
+    <li><a href="#">Mundo Porsche</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="nav-search" aria-label="Buscar">&#9906;</button>
+    <button class="nav-cta">Configurar</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide hero-slide-1 active"></div>
+    <div class="hero-slide hero-slide-2"></div>
+    <div class="hero-slide hero-slide-3"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-tag">Novo</p>
+    <h1 class="hero-title">O novo <strong>Cayenne Coupé</strong> Electric.</h1>
+    <a href="#" class="hero-cta">Saiba mais</a>
+    <a href="#" class="hero-cta-ghost">Configurar</a>
+  </div>
+  <div class="hero-dots">
+    <div class="hero-dot active" data-slide="0"></div>
+    <div class="hero-dot" data-slide="1"></div>
+    <div class="hero-dot" data-slide="2"></div>
+  </div>
+</section>
+
+<!-- MODELS -->
+<section class="models-section">
+  <div class="section-header reveal">
+    <h2>Sua viagem com a Porsche começa agora.</h2>
+  </div>
+  <div class="models-grid">
+    <!-- 911 -->
+    <div class="model-card reveal">
+      <img src="https://images.unsplash.com/photo-1611859266238-4b98091d9d9b?w=800&q=80" alt="Porsche 911" loading="lazy">
+      <div class="model-card-overlay"></div>
+      <div class="model-card-info">
+        <span class="model-badge badge-gas">Gasolina</span>
+        <div class="model-name">911</div>
+        <div class="model-desc">Icônico carro esportivo de 2 portas com motor traseiro.</div>
+        <a href="#" class="model-link">Explorar</a>
+      </div>
+    </div>
+    <!-- 718 -->
+    <div class="model-card reveal">
+      <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=800&q=80" alt="Porsche 718" loading="lazy">
+      <div class="model-card-overlay"></div>
+      <div class="model-card-info">
+        <span class="model-badge badge-gas">Gasolina</span>
+        <div class="model-name">718</div>
+        <div class="model-desc">Carro esportivo de 2 lugares com motor central.</div>
+        <a href="#" class="model-link">Explorar</a>
+      </div>
+    </div>
+    <!-- Taycan -->
+    <div class="model-card reveal">
+      <img src="https://images.unsplash.com/photo-1617531653332-bd46c16f4d68?w=800&q=80" alt="Porsche Taycan" loading="lazy">
+      <div class="model-card-overlay"></div>
+      <div class="model-card-info">
+        <span class="model-badge badge-electric">Elétrico</span>
+        <div class="model-name">Taycan</div>
+        <div class="model-desc">Esportivo elétrico de 4 portas, 4/5 lugares.</div>
+        <a href="#" class="model-link">Explorar</a>
+      </div>
+    </div>
+    <!-- Panamera -->
+    <div class="model-card reveal">
+      <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=800&q=80" alt="Porsche Panamera" loading="lazy">
+      <div class="model-card-overlay"></div>
+      <div class="model-card-info">
+        <span class="model-badge badge-hybrid">Híbrido</span>
+        <div class="model-name">Panamera</div>
+        <div class="model-desc">Sedan de luxo de elevado conforto. 4 portas, 4/5 lugares.</div>
+        <a href="#" class="model-link">Explorar</a>
+      </div>
+    </div>
+    <!-- Macan -->
+    <div class="model-card reveal">
+      <img src="https://images.unsplash.com/photo-1551830820-c6878fbe0bc8?w=800&q=80" alt="Porsche Macan" loading="lazy">
+      <div class="model-card-overlay"></div>
+      <div class="model-card-info">
+        <span class="model-badge badge-electric">Elétrico</span>
+        <span class="model-badge badge-gas">Gasolina</span>
+        <div class="model-name">Macan</div>
+        <div class="model-desc">SUV compacto esportivo de 4 portas e 5 lugares.</div>
+        <a href="#" class="model-link">Explorar</a>
+      </div>
+    </div>
+    <!-- Cayenne -->
+    <div class="model-card reveal">
+      <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80" alt="Porsche Cayenne" loading="lazy">
+      <div class="model-card-overlay"></div>
+      <div class="model-card-info">
+        <span class="model-badge badge-electric">Elétrico</span>
+        <span class="model-badge badge-hybrid">Híbrido</span>
+        <span class="model-badge badge-gas">Gasolina</span>
+        <div class="model-name">Cayenne</div>
+        <div class="model-desc">SUV versátil até 5 lugares.</div>
+        <a href="#" class="model-link">Explorar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINDER -->
+<section class="finder-section">
+  <div class="finder-text">
+    <h2>Encontre seu Porsche novo ou seminovo.</h2>
+    <p>Ficou mais fácil encontrar o Porsche de seus sonhos. Digite sua localização e navegue pelas melhores ofertas disponíveis perto de você.</p>
+    <div class="finder-input-row">
+      <input class="finder-input" type="text" placeholder="Digite sua cidade ou CEP...">
+      <button class="finder-btn">Buscar</button>
+    </div>
+    <span class="finder-link">Ver todas as ofertas disponíveis</span>
+  </div>
+  <div class="finder-image">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&q=80" alt="Porsche finder">
+  </div>
+</section>
+
+<!-- HIGHLIGHT BANNER -->
+<div class="highlight-banner">
+  <div class="highlight-banner-content reveal">
+    <p class="label">Performance elétrica</p>
+    <h2>O futuro da <strong>mobilidade esportiva.</strong></h2>
+    <a href="#" class="hero-cta">Descubra a e-Performance</a>
+  </div>
+</div>
+
+<!-- DISCOVER -->
+<section class="discover-section">
+  <div class="section-header reveal">
+    <h2>Descubra</h2>
+    <p>Explore o universo Porsche — da performance elétrica ao estilo de vida que define uma geração.</p>
+  </div>
+  <div class="discover-grid">
+    <div class="discover-card reveal">
+      <div class="discover-card-img">
+        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80" alt="E-Performance">
+      </div>
+      <div class="discover-card-body">
+        <div class="discover-card-tag">Inovação</div>
+        <div class="discover-card-title">E-Performance Porsche</div>
+        <div class="discover-card-desc">A eletromobilidade encontra a emoção esportiva. Descubra o que significa conduzir o futuro.</div>
+        <a href="#" class="discover-card-link">Saiba mais</a>
+      </div>
+    </div>
+    <div class="discover-card reveal">
+      <div class="discover-card-img">
+        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=600&q=80" alt="Tequipment">
+      </div>
+      <div class="discover-card-body">
+        <div class="discover-card-tag">Acessórios</div>
+        <div class="discover-card-title">Tequipment & Lifestyle</div>
+        <div class="discover-card-desc">Personalize seu Porsche com acessórios originais e expresse seu estilo único.</div>
+        <a href="#" class="discover-card-link">Explorar</a>
+      </div>
+    </div>
+    <div class="discover-card reveal">
+      <div class="discover-card-img">
+        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&q=80" alt="Finder">
+      </div>
+      <div class="discover-card-body">
+        <div class="discover-card-tag">Concessionárias</div>
+        <div class="discover-card-title">Rede de Concessionárias</div>
+        <div class="discover-card-desc">Encontre a concessionária Porsche mais próxima e conheça nossos especialistas.</div>
+        <a href="#" class="discover-card-link">Ver mapa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="none" stroke="#D5001C" stroke-width="3"/>
+          <circle cx="50" cy="50" r="36" fill="none" stroke="#D5001C" stroke-width="1.5"/>
+          <line x1="50" y1="14" x2="50" y2="86" stroke="#D5001C" stroke-width="1.2"/>
+          <line x1="14" y1="50" x2="86" y2="50" stroke="#D5001C" stroke-width="1.2"/>
+        </svg>
+        <span>Porsche Brasil</span>
+      </div>
+      <p>Há mais de 75 anos criando emoções sobre rodas. Cada modelo é uma obra-prima de engenharia e design.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Modelos</h4>
+      <ul>
+        <li><a href="#">911</a></li>
+        <li><a href="#">718</a></li>
+        <li><a href="#">Taycan</a></li>
+        <li><a href="#">Panamera</a></li>
+        <li><a href="#">Macan</a></li>
+        <li><a href="#">Cayenne</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#">Porsche Financeiro</a></li>
+        <li><a href="#">Porsche Drive</a></li>
+        <li><a href="#">Porsche Approved</a></li>
+        <li><a href="#">Serviço & Manutenção</a></li>
+        <li><a href="#">Tequipment</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Sobre a Porsche</a></li>
+        <li><a href="#">Sustentabilidade</a></li>
+        <li><a href="#">Carreiras</a></li>
+        <li><a href="#">Imprensa</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Dr. Ing. h.c. F. Porsche AG. Todos os direitos reservados.</p>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Facebook</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hero slideshow
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  let current = 0;
+  let timer;
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() { goTo((current + 1) % slides.length); }
+
+  dots.forEach(d => d.addEventListener('click', () => {
+    clearInterval(timer);
+    goTo(+d.dataset.slide);
+    timer = setInterval(next, 5000);
+  }));
+
+  timer = setInterval(next, 5000);
+
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('light', window.scrollY > window.innerHeight * 0.85);
+  });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        e.target.style.transitionDelay = (i % 3) * 0.12 + 's';
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => io.observe(r)); a
+</script>
+</body>
+</html>

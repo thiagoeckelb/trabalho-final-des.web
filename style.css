@@ -28,14 +28,14 @@
   .nav-logo span { color: var(--white); font-size: 13px; letter-spacing: 2px; font-weight: 300; text-transform: uppercase; }
   nav.light .nav-logo span { color: var(--black); }
   .nav-links { display: flex; gap: 28px; list-style: none; }
-  .nav-links a { color: var(--white); text-decoration: none; font-size: 13px; font-weight: 300; letter-spacing: .5px; transition: color .2s; }
+  .nav-links a { color: var(--white); text-decoration: none; font-size: 13px; font-weight: 300; letter-spacing: .5px; transition: color .2s;}
   nav.light .nav-links a { color: var(--black); }
-  .nav-links a:hover { color: var(--red); }
+  .nav-links a:hover { color: var(--red);}
   .nav-actions { display: flex; gap: 16px; align-items: center; }
   .nav-search { background: none; border: none; cursor: pointer; color: var(--white); font-size: 18px; }
   nav.light .nav-search { color: var(--black); }
   .nav-cta { background: var(--red); color: var(--white); border: none; padding: 8px 20px; font-size: 12px; letter-spacing: 1px; font-weight: 500; cursor: pointer; text-transform: uppercase; transition: background .2s; }
-  .nav-cta:hover { background: #a80016; }
+  .nav-cta:hover { background: #a80016;}
 
   /* ── HERO ── */
   .hero {
