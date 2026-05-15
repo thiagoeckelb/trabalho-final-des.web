@@ -12,6 +12,12 @@ html{
 body {
   background: #0f0f10;
   margin: 0;
+  display: flex;
+  flex-direction:column;
+}
+
+main{
+    flex:1;
 }
 
 .body-filter {
@@ -63,21 +69,18 @@ body {
   font-size: 40px;
   font-weight: 300;
   justify-content: center;
-  
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.8),
-    rgba(0,0,0,1)
-  );
+  text-align: center;
+  background:linear-gradient(to top,rgba(0,0,0,0.8),rgba(0,0,0,1));
   padding: 10px;
-  display:flex;
+  display: flex;
   margin: 0;
+  align-items: center;
 }
 
 .hero-text img{
   width: 100px;
   margin: 0;
-  display: block;
+  display: flex;
 }
 
 .hero-text p{
@@ -373,5 +376,13 @@ body {
     
 }
 
+/* RODAPÉ */
 
+footer {
+  background: linear-gradient(to top, #0f0f10, #0f0f1000);
+  color: #fff; 
+  text-align:center;
+  padding: 20px 0;
+  
+}
 
