@@ -154,12 +154,7 @@ body {
         content:"";
         position:absolute;
         inset:0;
-        background:linear-gradient(
-            135deg,
-            transparent,
-            rgba(255,255,255,0.05),
-            transparent
-        );
+        background:black;
 
         opacity:0;
         transition:0.4s;
