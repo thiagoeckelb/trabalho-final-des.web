@@ -207,7 +207,7 @@ body {
 
 .container{
         display:grid;
-        grid-template-columns:repeat(3, 220px);
+        grid-template-columns:repeat(3, 300px);
         gap:20px;
         justify-content:center;
         margin:60px;
@@ -260,7 +260,7 @@ body {
     .card-modelos img{
         width:120px;
         object-fit:contain;
-        filter:grayscale(100%) brightness(0.9);
+        filter:grayscale(0%) brightness(0.9); 
         transition:0.4s;
     }
 
