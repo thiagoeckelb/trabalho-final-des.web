@@ -207,7 +207,7 @@ body {
 
 .container{
         display:grid;
-        grid-template-columns:repeat(4, 220px);
+        grid-template-columns:repeat(3, 220px);
         gap:20px;
         justify-content:center;
         margin:60px;
@@ -286,4 +286,14 @@ body {
             grid-template-columns:1fr;
         }
     }
+
+.card-text{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    color:white;
+    font-size:18px;
+    font-weight: 400px;
+    
+}
 
