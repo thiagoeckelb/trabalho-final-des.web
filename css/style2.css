@@ -434,7 +434,7 @@ main{
         );
 
         opacity:0;
-        transition:0.4s;
+        transition:0.4s;  
     }
 
      .card-modelos:hover{
