@@ -83,7 +83,14 @@
             </div>
 
         </section>
-            
+
+        <div>   
+            <a href="#marcas" class="scroll-link" id="scrollBtn">
+                Marcas <br>
+                <span style="display: inline-block;transform: rotate(90deg);font-size: 30px;font-weight: 100px;margin: 0;">&#10095;</span>
+            </a>
+        </div>
+
             <div class="grid-cards" id="marcas">
             <a href="../../pages/lamborghini/lamborghini.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Lamborghini/logo.png" style="width: 200px; height: auto ;"></button></a>
             <a href="../../pages/ferrari/ferrari.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Ferrari/logo.png" style="width: 200px; height: auto ;"></button></a>
@@ -93,7 +100,8 @@
             <a href="../../pages/mclaren/mclaren.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/McLaren/logo1.png" style="width: 200px; height: auto ;"></button></a>  
             <a href="../../pages/koenigsegg/koenigsegg.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Koenigsegg/logo.png" style="width: 200px; height: auto ;"></button></a>
             <a href="../../pages/pagani/pagani.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Pagani/logo.png" style="width: 200px; height: auto ;"></button></a>
-            <a href="../../pages/rolls_royce/rolls_royce.html"><button type="button" style="width: 2２０px; height: ２２０px;background-color:black;" class="card"><img src="../../img/Rolls_Royce/logo.png" style="width: ２００px; height: auto ;"></button></a>
+            <a href="../../pages/rolls_royce/rolls_royce.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Rolls_Royce/logo.png" style="width: 200px; height: auto ;"></button></a>
+            <a href="../../pages/aston_martin/aston_martin.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Aston Martin/logo.png" style="width: 200px; height: auto ;"></button></a>
             </div>
 
             <script>
@@ -163,6 +171,26 @@
                 function toggleMenu() {
                 document.getElementById('hcDrawer').classList.toggle('open');
                 }
+
+                /* LINK FIXO */
+                const btn = document.getElementById("scrollBtn");
+                const destino = document.getElementById("marcas");
+
+                /* clique */
+                btn.addEventListener("click", function(e){
+                    e.preventDefault();
+                    destino.scrollIntoView({ behavior: "smooth" });
+                });
+
+                /* controle de visibilidade */
+                window.addEventListener("scroll", function(){
+                    if (window.scrollY <= 100) {
+                        btn.classList.remove("hide");
+                    } else {
+                        btn.classList.add("hide");
+                    }
+                });
+
             </script>
     </main>
             <footer>

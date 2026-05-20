@@ -51,7 +51,7 @@ main{
   position: absolute;
   z-index: 2;
   align-items: center;
-  
+  margin-left: -40px;
 }
 
 .navbar-brand {
@@ -104,7 +104,7 @@ main{
   top: 0;
   right: 0;        /* cola na direita */
   bottom: 0;       /* ocupa altura total */
-  width: 40%;      /* metade da tela */
+  width: 25%;      /* metade da tela */
   transform: translateX(100%);   /* entra da direita */
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   background: rgba(15, 15, 18, 0.94);
@@ -205,6 +205,58 @@ main{
   margin: 0;
   padding: 50px 0px 0px;
 }
+
+/* BOTÃO/LINK */
+
+.scroll-link{
+    position:fixed;
+    text-align: center;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    padding:14px 26px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,0.15);
+    background:rgba(0,0,0,0.25);
+    backdrop-filter:blur(10px);
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    
+    transition:0.4s;
+
+    z-index:999;
+}
+
+.scroll-link:hover{
+    background:rgba(255,255,255,0.08);
+}
+
+/* esconder botão */
+
+.scroll-link.hide{
+    opacity:0;
+    pointer-events:none;
+}
+
+/* SEÇÃO DESTINO */
+
+#modelos{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#050505;
+
+    font-size:50px;
+    font-weight:200;
+}
+
+
 
 /* CARROSSEL */
 
@@ -322,7 +374,7 @@ main{
 
  .grid-cards{
         display:grid;
-        grid-template-columns:repeat(3, 220px);
+        grid-template-columns:repeat(5, 220px);
         gap:20px;
         justify-content:center;
         margin:60px;
