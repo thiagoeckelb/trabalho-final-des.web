@@ -12,30 +12,30 @@
 <body>
     <main id="main">
         <section class="mx-carousel"> 
-        <!-- NAV -->
-        <nav class="navbar" style="height: 65px;font-weight: 400;letter-spacing: 0px;background: transparent;background-color: transparent;">
-            <div class="container-fluid" style="display: flex;align-items: center;">
-            <a class="navbar-brand" href="../../../index.html" style="font-weight: 300;"><img src="../../../../img/logo01.png" style="width: 150px;margin-top: 5px;"> HYPERCARS</a>
-            
-                <div class="hc-drawer" id="hcDrawer">
-                    <span class="hc-close" onclick="toggleMenu()">✕</span>     
-                        <ul>
-                            <li><a href="../../../index.html" class="active">Inicio</a></li>
-                            <li><a href="#marcas">Marcas</a></li>
-                            <li><a href="../../../pages/modelos.html">Modelos</a></li>
-                            <li><a href="#sobre">Sobre</a></li>
-                        </ul>
-                    </div>
-                    <!-- navbar-toggler -->
-                    <div class="hc-toggler" onclick="toggleMenu()" aria-label="Abrir menu">
-                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
-                            <line x1="0" y1="1" x2="18" y2="1" stroke="white" stroke-width="1.5"/>
-                            <line x1="0" y1="7" x2="18" y2="7" stroke="white" stroke-width="1.5"/>
-                            <line x1="0" y1="13" x2="18" y2="13" stroke="white" stroke-width="1.5"/>
-                        </svg>
-                    </div>
-            </div>
-        </nav>
+            <!-- NAV -->
+            <nav class="navbar" style="height: 65px;font-weight: 400;letter-spacing: 0px;background: transparent;background-color: transparent;">
+                <div class="container-fluid" style="display: flex;align-items: center;">
+                <a class="navbar-brand" href="./index.html" style="font-weight: 300;"><img src="../../../../img/logo01.png" style="width: 150px;margin-top: 5px;"> HYPERCARS</a>
+                
+                    <div class="hc-drawer" id="hcDrawer">
+                        <span class="hc-close" onclick="toggleMenu()">✕</span>     
+                            <ul>
+                                <li><a href="./index.html" class="active">Inicio</a></li>
+                                <li><a href="#marcas">Marcas</a></li>
+                                <li><a href="./pages/modelos.html">Modelos</a></li>
+                                <li><a href="#sobre">Sobre</a></li>
+                            </ul>
+                        </div>
+                        <!-- navbar-toggler -->
+                        <div class="hc-toggler" onclick="toggleMenu()" aria-label="Abrir menu">
+                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+                                <line x1="0" y1="1" x2="18" y2="1" stroke="white" stroke-width="1.5"/>
+                                <line x1="0" y1="7" x2="18" y2="7" stroke="white" stroke-width="1.5"/>
+                                <line x1="0" y1="13" x2="18" y2="13" stroke="white" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                </div>
+            </nav>
             <!-- BANNER -->
             <div class="mx-carousel-wrapper">
         
@@ -78,10 +78,12 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="mx-controls">
                     <button class="mx-btn prev">&#10094;</button>
                     <button class="mx-btn next">&#10095;</button>
                 </div>
+
                  <div class="mx-indicators"></div>
             </div>
 
@@ -251,10 +253,9 @@
                     });
                 });
 
-                /* roda no scroll E no carregamento da página */
+                /* roda no scroll e no carregamento da página */
                 window.addEventListener("scroll", atualizarBotoes);
                 document.addEventListener("DOMContentLoaded", atualizarBotoes);
-
 
             </script>
     </main>
