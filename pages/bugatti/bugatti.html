@@ -84,14 +84,9 @@
 
         </section>
 
-        <div>   
-            <a href="#marcas" class="scroll-link" id="scrollBtn">
-                Marcas <br>
-                <span style="display: inline-block;transform: rotate(90deg);font-size: 30px;font-weight: 100px;margin: 0;">&#10095;</span>
-            </a>
-        </div>
-
-            <div class="grid-cards" id="marcas">
+        
+        <div id="marcas"></div><br><br><br><br>
+            <div class="grid-cards">
             <a href="../../pages/lamborghini/lamborghini.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Lamborghini/logo.png" style="width: 200px; height: auto ;"></button></a>
             <a href="../../pages/ferrari/ferrari.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Ferrari/logo.png" style="width: 200px; height: auto ;"></button></a>
             <a href="../../pages/maserati/maserati.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Maserati/logo.jpg" style="width: 200px; height: auto ;"></button></a>
@@ -102,6 +97,52 @@
             <a href="../../pages/pagani/pagani.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Pagani/logo.png" style="width: 200px; height: auto ;"></button></a>
             <a href="../../pages/rolls_royce/rolls_royce.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Rolls_Royce/logo.png" style="width: 200px; height: auto ;"></button></a>
             <a href="../../pages/aston_martin/aston_martin.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../img/Aston Martin/logo.png" style="width: 200px; height: auto ;"></button></a>
+            </div><br><br><br><br>
+
+             
+            <div class="about-section" id="sobre">
+              <h1 style="font-size: 35px;margin: 40px;margin-top: 100px;">Sobre a HyperCars</h1><br><br>
+              <h1>Excelência em Importação de Hipercarros de Alto Luxo</h1>
+              <p>Na HyperCars, transformamos o processo de importação de veículos exclusivos em uma experiência sofisticada, segura e transparente. Atuamos no mercado de hipercarros e superesportivos de alto padrão, oferecendo soluções completas para clientes que buscam exclusividade, desempenho e excelência em cada detalhe.
+
+                Mais do que importar automóveis, conectamos nossos clientes às marcas e modelos mais desejados do mundo, com atendimento personalizado e acompanhamento especializado em todas as etapas.
+              </p>
+              <h1>Quem Somos</h1>
+              <p>A HyperCars nasceu com o propósito de elevar o padrão da importação automotiva premium no Brasil. Com foco em hipercarros, supercarros e veículos de luxo exclusivos, trabalhamos com os principais mercados internacionais para oferecer acesso a modelos raros, edições limitadas e configurações sob medida.
+              </p> <br>
+              <p>Nosso compromisso é unir sofisticação, confiança e eficiência em um serviço pensado para clientes exigentes.</p>
+              <h1>O Que Oferecemos</h1><br>
+              <h2>Importação Personalizada</h2>
+              <p>Realizamos todo o processo de importação de veículos de luxo de forma estratégica e segura, desde a busca internacional até a entrega final ao proprietário.
+              </p>
+              <h2>Curadoria Exclusiva</h2>
+              <p>Selecionamos veículos com histórico confiável, procedência verificada e alto padrão de conservação, garantindo segurança e valorização patrimonial.
+              </p>
+              <h2>Assessoria Completa</h2>
+              <p>Nossa equipe acompanha cada etapa do processo:</p>
+              <ul>
+                <li>Pesquisa e localização do veículo</li>
+                <li>Negociação internacional</li>
+                <li>Documentação e regularização</li>
+                <li>Transporte e logística internacional</li>
+                <li>Nacionalização e desembaraço</li>
+                <li>Entrega técnica personalizada</li>
+              </ul>
+              <h2>Atendimento Premium</h2>
+              <p>Cada cliente possui atendimento individualizado, com suporte consultivo e comunicação clara durante toda a jornada.</p>
+            </div>
+
+            <!-- Botão 1: aparece entre 0-500px, vai para #modelos -->
+            <div class="scroll-link">
+                <a href="#marcas" id="scrollBtn" data-destino="marcas" data-min="0" data-max="500">
+                Marcas
+            </a>
+            </div>
+            <div class="scroll-link">
+                <!-- Botão 2: aparece entre 600-1200px, vai para #contato -->
+                <a id="scrollBtn" id="scrollBtn" href="#sobre" data-destino="sobre" data-min="800" data-max="1200">
+                   Sobre
+                </a>
             </div>
 
             <script>
@@ -173,23 +214,37 @@
                 }
 
                 /* LINK FIXO */
-                const btn = document.getElementById("scrollBtn");
-                const destino = document.getElementById("marcas");
+            
+                const botoes = document.querySelectorAll("#scrollBtn");
+
+                function atualizarBotoes() {
+                    const scrollAtual = window.scrollY;
+
+                    botoes.forEach(function(btn) {
+                        const min = Number(btn.dataset.min);
+                        const max = Number(btn.dataset.max);
+
+                        if (scrollAtual >= min && scrollAtual <= max) {
+                            btn.classList.remove("hide");
+                        } else {
+                            btn.classList.add("hide");
+                        }
+                    });
+                }
 
                 /* clique */
-                btn.addEventListener("click", function(e){
-                    e.preventDefault();
-                    destino.scrollIntoView({ behavior: "smooth" });
+                botoes.forEach(function(btn) {
+                    btn.addEventListener("click", function(e) {
+                        e.preventDefault();
+                        const destino = document.getElementById(btn.dataset.destino);
+                        destino.scrollIntoView({ behavior: "smooth" });
+                    });
                 });
 
-                /* controle de visibilidade */
-                window.addEventListener("scroll", function(){
-                    if (window.scrollY <= 100) {
-                        btn.classList.remove("hide");
-                    } else {
-                        btn.classList.add("hide");
-                    }
-                });
+                /* roda no scroll E no carregamento da página */
+                window.addEventListener("scroll", atualizarBotoes);
+                document.addEventListener("DOMContentLoaded", atualizarBotoes);
+
 
             </script>
     </main>
