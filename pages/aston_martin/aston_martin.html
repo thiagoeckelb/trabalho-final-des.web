@@ -7,594 +7,41 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Porsche+Next:wght@100;200;300;400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-  <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #000;
-      font-family: 'Porsche Next', 'Helvetica Neue', Arial, sans-serif;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    main { flex: 1; }
-
-    /* ─── NAVBAR ─────────────────────────────────────────────── */
-
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 65px;
-      background: rgba(0, 0, 0, 0.72);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      padding: 0 40px;
-      justify-content: space-between;
-    }
-
-    .navbar-brand {
-      color: #fff;
-      font-weight: 300;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      font-size: 18px;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .navbar-brand img {
-      width: 130px;
-      margin-top: 3px;
-    }
-
-    .navbar-brand:hover { color: #fff; }
-
-    .hc-toggler {
-      width: 43px;
-      height: 43px;
-      border: none;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.07);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .hc-toggler:hover { background: rgba(255,255,255,0.14); }
-
-    .hc-drawer {
-      position: fixed;
-      top: 0; right: 0; bottom: 0;
-      width: 25%;
-      transform: translateX(100%);
-      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-      background: rgba(10, 10, 12, 0.96);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      z-index: 999;
-      padding: 80px 40px 40px;
-      border-left: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .hc-drawer.open { transform: translateX(0); }
-
-    .hc-drawer ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .hc-drawer li a {
-      display: block;
-      color: rgba(255,255,255,0.5);
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 300;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-      transition: color 0.2s;
-    }
-
-    .hc-drawer li:last-child a { border-bottom: none; }
-
-    .hc-drawer li a:hover,
-    .hc-drawer li a.active { color: #fff; }
-
-    .hc-close {
-      position: absolute;
-      top: 22px; right: 28px;
-      color: rgba(255,255,255,0.4);
-      font-size: 20px;
-      cursor: pointer;
-      transition: color 0.2s;
-      line-height: 1;
-      background: none;
-      border: none;
-    }
-
-    .hc-close:hover { color: #fff; }
-
-    /* ─── HERO DA MARCA ──────────────────────────────────────── */
-
-    .brand-hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .brand-hero__bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('../../../img/Lamborghini/lamborghini-aventador03.jpg');
-      background-size: cover;
-      background-position: center 30%;
-      filter: brightness(38%) saturate(1.1);
-      transform: scale(1.04);
-      transition: transform 8s ease;
-    }
-
-    .brand-hero:hover .brand-hero__bg {
-      transform: scale(1.0);
-    }
-
-    /* Gradiente duplo: base escura + fade para o conteúdo */
-    .brand-hero__vignette {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to top,   rgba(0,0,0,0.92) 0%,  rgba(0,0,0,0.0) 55%),
-        linear-gradient(to bottom, rgba(0,0,0,0.55) 0%,  rgba(0,0,0,0.0) 30%);
-    }
-
-    .brand-hero__content {
-      position: relative;
-      z-index: 2;
-      padding: 0 64px 72px;
-      width: 100%;
-    }
-
-    .brand-hero__eyebrow {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 300;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
-      margin-bottom: 18px;
-    }
-
-    .brand-hero__logo {
-      display: block;
-      width: 110px;
-      margin-bottom: 28px;
-      filter: brightness(0) invert(1) opacity(0.9);
-    }
-
-    .brand-hero__title {
-      font-size: clamp(2.8rem, 5vw, 5rem);
-      font-weight: 100;
-      letter-spacing: 10px;
-      text-transform: uppercase;
-      line-height: 1;
-      margin-bottom: 18px;
-    }
-
-    .brand-hero__subtitle {
-      font-size: 13px;
-      font-weight: 300;
-      letter-spacing: 2.5px;
-      color: rgba(255,255,255,0.45);
-      text-transform: uppercase;
-      max-width: 380px;
-      line-height: 1.9;
-    }
-
-    /* Linha de acento dourada */
-    .brand-hero__accent {
-      width: 40px;
-      height: 1px;
-      background: #d4a017;
-      margin-bottom: 22px;
-    }
-
-    /* Scroll hint */
-    .brand-hero__scroll {
-      position: absolute;
-      bottom: 36px;
-      right: 64px;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.3);
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-
-    .brand-hero__scroll-line {
-      width: 1px;
-      height: 48px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.35), transparent);
-      animation: scrollPulse 2.2s ease-in-out infinite;
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.4; transform: scaleY(1); }
-      50%       { opacity: 1;   transform: scaleY(1.12); }
-    }
-
-    /* ─── SEÇÃO DE MODELOS ───────────────────────────────────── */
-
-    .models-section {
-      padding: 120px 64px 100px;
-      background: #000;
-    }
-
-    .models-section__header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin-bottom: 72px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-    }
-
-    .models-section__label {
-      font-size: 11px;
-      font-weight: 300;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 12px;
-    }
-
-    .models-section__title {
-      font-size: 2.2rem;
-      font-weight: 200;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-    }
-
-    .models-section__count {
-      font-size: 11px;
-      letter-spacing: 3px;
-      color: rgba(255,255,255,0.3);
-      text-transform: uppercase;
-      padding-bottom: 4px;
-    }
-
-    /* ─── GRID DE CARDS ──────────────────────────────────────── */
-
-    .model-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-    }
-
-    /* ─── CARD ───────────────────────────────────────────────── */
-
-    .model-card {
-      position: relative;
-      background: #080808;
-      overflow: hidden;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-
-      /* A linha dourada é a signature: nasce de 0 e cresce no hover */
-      border-top: 2px solid transparent;
-      transition: border-color 0.4s ease;
-    }
-
-    .model-card::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: #d4a017;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-      z-index: 3;
-    }
-
-    .model-card:hover::after {
-      transform: scaleX(1);
-    }
-
-    /* Imagem */
-    .model-card__img-wrap {
-      position: relative;
-      width: 100%;
-      padding-bottom: 62%;  /* aspect-ratio ~16:10 */
-      overflow: hidden;
-      background: #0d0d0d;
-    }
-
-    .model-card__img-wrap img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      filter: brightness(0.88) saturate(0.95);
-      transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
-    }
-
-    .model-card:hover .model-card__img-wrap img {
-      transform: scale(1.05);
-      filter: brightness(1) saturate(1.1);
-    }
-
-    /* Overlay gradiente na imagem */
-    .model-card__img-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(8,8,8,0.7) 0%, rgba(0,0,0,0) 55%);
-      z-index: 1;
-    }
-
-    /* Conteúdo textual */
-    .model-card__body {
-      padding: 28px 28px 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      flex: 1;
-      border: 1px solid rgba(255,255,255,0.055);
-      border-top: none;
-      transition: border-color 0.3s;
-    }
-
-    .model-card:hover .model-card__body {
-      border-color: rgba(255,255,255,0.1);
-    }
-
-    /* Eyebrow da marca */
-    .model-card__brand {
-      font-size: 10px;
-      font-weight: 300;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #d4a017;
-      margin-bottom: 8px;
-    }
-
-    /* Nome do modelo */
-    .model-card__name {
-      font-size: 1.5rem;
-      font-weight: 200;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #fff;
-      line-height: 1.2;
-      margin-bottom: 22px;
-    }
-
-    /* Divisor */
-    .model-card__divider {
-      width: 100%;
-      height: 1px;
-      background: rgba(255,255,255,0.07);
-      margin-bottom: 20px;
-    }
-
-    /* Specs */
-    .model-card__specs {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 22px;
-    }
-
-    .model-card__spec {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 12px;
-      font-weight: 300;
-      letter-spacing: 1px;
-      color: rgba(255,255,255,0.5);
-    }
-
-    .model-card__spec-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      background: rgba(255,255,255,0.05);
-      flex-shrink: 0;
-    }
-
-    .model-card__spec-icon svg {
-      width: 14px;
-      height: 14px;
-      stroke: rgba(255,255,255,0.45);
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .model-card__spec-label {
-      color: rgba(255,255,255,0.28);
-      margin-right: 2px;
-    }
-
-    .model-card__spec-value {
-      color: rgba(255,255,255,0.8);
-      font-weight: 400;
-    }
-
-    /* Badge de disponibilidade */
-    .model-card__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
-      border-radius: 4px;
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      width: fit-content;
-      user-select: none;
-      pointer-events: none;
-    }
-
-    .model-card__badge--available {
-      background: rgba(42, 110, 63, 0.3);
-      border: 1px solid rgba(74, 222, 128, 0.25);
-      color: #4ade80;
-    }
-
-    .model-card__badge--unavailable {
-      background: rgba(110, 31, 31, 0.3);
-      border: 1px solid rgba(248, 113, 113, 0.25);
-      color: #f87171;
-    }
-
-    .model-card__badge-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .model-card__badge--available .model-card__badge-dot {
-      background: #4ade80;
-      box-shadow: 0 0 5px #4ade80aa;
-    }
-
-    .model-card__badge--unavailable .model-card__badge-dot {
-      background: #f87171;
-      box-shadow: 0 0 5px #f87171aa;
-    }
-
-    /* ─── RODAPÉ ──────────────────────────────────────────────── */
-
-    footer {
-      background: linear-gradient(to top, #0f0f10, #0f0f1000);
-      color: rgba(255,255,255,0.35);
-      text-align: center;
-      padding: 28px 0;
-      font-size: 12px;
-      letter-spacing: 1px;
-      font-weight: 300;
-    }
-
-    /* ─── RESPONSIVO ─────────────────────────────────────────── */
-
-    @media (max-width: 960px) {
-      .model-grid {
-        grid-template-columns: 1fr;
-        gap: 2px;
-      }
-
-      .models-section {
-        padding: 100px 24px 80px;
-      }
-
-      .models-section__header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
-
-      .brand-hero__content {
-        padding: 0 28px 60px;
-      }
-
-      .brand-hero__scroll {
-        right: 28px;
-      }
-
-      .navbar {
-        padding: 0 20px;
-      }
-
-      .hc-drawer {
-        width: 80%;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .brand-hero__title {
-        font-size: 2.2rem;
-        letter-spacing: 6px;
-      }
-
-      .model-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+    <link rel="stylesheet" href="../../css/style-marcas.css">
 </head>
-
 <body>
 
-  <!-- ─── NAVBAR ─────────────────────────────────────────── -->
-  <nav class="navbar">
-    <a class="navbar-brand" href="../../index.html">
-      <img src="../../img/logo01.png" alt="HyperCars">
-      HYPERCARS
-    </a>
-
-    <div class="hc-drawer" id="hcDrawer">
-      <button class="hc-close" onclick="toggleMenu()" aria-label="Fechar menu">✕</button>
-      <ul>
-        <li><a href="../../index.html">Início</a></li>
-        <li><a href="../../index.html#marcas">Marcas</a></li>
-        <li><a href="../../pages/modelos.html">Modelos</a></li>
-        <li><a href="../../index.html#sobre">Sobre</a></li>
-      </ul>
-    </div>
-
-    <button class="hc-toggler" onclick="toggleMenu()" aria-label="Abrir menu">
-      <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
-        <line x1="0" y1="1"  x2="18" y2="1"  stroke="white" stroke-width="1.5"/>
-        <line x1="0" y1="7"  x2="18" y2="7"  stroke="white" stroke-width="1.5"/>
-        <line x1="0" y1="13" x2="18" y2="13" stroke="white" stroke-width="1.5"/>
-      </svg>
-    </button>
-  </nav>
+  <!-- NAVBAR  -->
+  
 
   <main>
 
-    <!-- ─── HERO ──────────────────────────────────────────── -->
+    <!-- HERO-->
     <section class="brand-hero" aria-label="Lamborghini">
+        <nav class="navbar">
+            <a class="navbar-brand" href="../../index.html">
+              <img src="../../img/logo01.png" alt="HyperCars">
+              HYPERCARS
+            </a>
+        
+            <div class="hc-drawer" id="hcDrawer">
+              <button class="hc-close" onclick="toggleMenu()" aria-label="Fechar menu">✕</button>
+              <ul>
+                <li><a href="../../index.html">Início</a></li>
+                <li><a href="../../index.html#marcas">Marcas</a></li>
+                <li><a href="../../pages/modelos.html">Modelos</a></li>
+                <li><a href="../../index.html#sobre">Sobre</a></li>
+              </ul>
+            </div>
+        
+            <button class="hc-toggler" onclick="toggleMenu()" aria-label="Abrir menu">
+              <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+                <line x1="0" y1="1"  x2="18" y2="1"  stroke="white" stroke-width="1.5"/>
+                <line x1="0" y1="7"  x2="18" y2="7"  stroke="white" stroke-width="1.5"/>
+                <line x1="0" y1="13" x2="18" y2="13" stroke="white" stroke-width="1.5"/>
+              </svg>
+            </button>
+          </nav>
       <div class="brand-hero__bg" id="heroBg"></div>
       <div class="brand-hero__vignette"></div>
 
@@ -619,23 +66,23 @@
       </div>
     </section>
 
-    <!-- ─── MODELOS ───────────────────────────────────────── -->
+    <!--MODELOS-->
     <section class="models-section" id="modelos">
-      <div class="models-section__header">
-        <div>
-          <p class="models-section__label">Seleção · Lamborghini</p>
-          <h2 class="models-section__title">Modelos</h2>
+        <div class="models-section__header">
+            <div>
+            <p class="models-section__label">Seleção · Lamborghini</p>
+            <h2 class="models-section__title">Modelos</h2>
+            </div>
+            <span class="models-section__count">03 Veículos</span>
         </div>
-        <span class="models-section__count">03 Veículos</span>
-      </div>
 
-      <div class="model-grid">
+        <div class="model-grid">
 
-        <!-- ── CARD 1 · Huracán EVO ─────────────────────── -->
+        <!--CARD 1-->
         <article class="model-card">
           <div class="model-card__img-wrap">
             <img
-              src="../../img/Lamborghini/huracan-evo-01.jpg"
+              src="../../img/Lamborghini/lamborghini-huracan-04.jpg"
               alt="Lamborghini Huracán EVO"
               loading="lazy"
             >
@@ -680,19 +127,19 @@
           </div>
         </article>
 
-        <!-- ── CARD 2 · Revuelto ──────────────────────── -->
+        <!--CARD 2-->
         <article class="model-card">
           <div class="model-card__img-wrap">
             <img
-              src="../../img/Lamborghini/revuelto-01.jpg"
-              alt="Lamborghini Revuelto"
+              src="../../img/Lamborghini/lamborghini-aventador02.jpg"
+              alt="Lamborghini Aventador"
               loading="lazy"
             >
             <div class="model-card__img-overlay"></div>
           </div>
           <div class="model-card__body">
             <span class="model-card__brand">Lamborghini</span>
-            <h3 class="model-card__name">Revuelto</h3>
+            <h3 class="model-card__name">Aventador</h3>
             <div class="model-card__divider"></div>
             <ul class="model-card__specs" aria-label="Especificações">
               <li class="model-card__spec">
@@ -720,18 +167,18 @@
                 <span class="model-card__spec-value">2.5 s</span>
               </li>
             </ul>
-            <span class="model-card__badge model-card__badge--unavailable" aria-label="Indisponível">
-              <span class="model-card__badge-dot"></span>
-              Indisponível
-            </span>
+            <span class="model-card__badge model-card__badge--available" aria-label="Disponível">
+                <span class="model-card__badge-dot"></span>
+                Disponível
+              </span>
           </div>
         </article>
 
-        <!-- ── CARD 3 · Urus SE ───────────────────────── -->
+        <!--CARD 3-->
         <article class="model-card">
           <div class="model-card__img-wrap">
             <img
-              src="../../img/Lamborghini/urus-se-01.jpg"
+              src="../../img/Lamborghini/lamborghini-urus02.jpg"
               alt="Lamborghini Urus SE"
               loading="lazy"
             >
@@ -767,10 +214,10 @@
                 <span class="model-card__spec-value">3.4 s</span>
               </li>
             </ul>
-            <span class="model-card__badge model-card__badge--available" aria-label="Disponível">
-              <span class="model-card__badge-dot"></span>
-              Disponível
-            </span>
+            <span class="model-card__badge model-card__badge--unavailable" aria-label="Indisponível">
+                <span class="model-card__badge-dot"></span>
+                Indisponível
+              </span>
           </div>
         </article>
 
