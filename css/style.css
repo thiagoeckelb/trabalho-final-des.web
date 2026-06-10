@@ -254,6 +254,7 @@
   
   .scroll-link:hover{
       background:rgba(255,255,255,0.08);
+      transition: 0.4s;
   }
   
   /* esconder botão */
@@ -297,6 +298,7 @@
   
   .scroll-link2:hover{
       background:rgba(255, 255, 255, 0.133);
+      transition: 0.4s;
   }
   
   /* SEÇÃO DESTINO */
@@ -639,57 +641,219 @@
   }
   
   /* SOBRE */
-  .about-section{
-      text-align: center;
-      align-items: center; 
-      justify-content: center;
-      display: block;
-      margin: 100px;
-      
+  .about-hero {
+    position: relative;
+    width: 100%;
+    height: 52vh;
+    min-height: 360px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .about-hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/Bugatti/tourbillon03.jpg');
+    background-size: cover;
+    background-position: center 35%;
+    filter: brightness(22%) saturate(0.8);
+  }
+
+  .about-hero__vignette {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to top,   rgba(0,0,0,1.0)  0%, rgba(0,0,0,0.0) 55%),
+      linear-gradient(to bottom, rgba(0,0,0,0.6)  0%, rgba(0,0,0,0.0) 30%);
+  }
+
+  .about-hero__content {
+    position: relative;
+    z-index: 2;
+    padding: 0 64px 56px;
+  }
+
+  .about-hero__eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #d4a017;
+    margin-bottom: 14px;
+  }
+
+  .about-hero__title {
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 100;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  /* ── SEÇÃO ÚNICA ─────────────────────────────────────── */
+
+  .about-section {
+    padding: 100px 0 120px;
+    background: #000;
+  }
+
+  /* Wrapper com largura controlada e centrada */
+  .about-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+
+  /* ── BLOCO de conteúdo ───────────────────────────────── */
+
+  .about-block {
+    padding: 52px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .about-block:first-child { padding-top: 0; }
+  .about-block:last-child  { border-bottom: none; padding-bottom: 0; }
+
+  .about-block__eyebrow {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #d4a017;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .about-block__title {
+    font-size: 1.55rem;
+    font-weight: 200;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+
+  .about-block__text {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.6px;
+    line-height: 2;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .about-block__text + .about-block__text {
+    margin-top: 16px;
+  }
+
+  /* ── GRID de serviços ────────────────────────────────── */
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 40px;
+  }
+
+  .service-item {
+    padding: 32px 28px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.055);
+    position: relative;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .service-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: #d4a017;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .service-item:hover {
+    border-color: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.035);
+  }
+
+  .service-item:hover::before {
+    transform: scaleX(1);
+  }
+
+  .service-item__icon {
+    width: 36px; height: 36px;
+    border-radius: 7px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+  }
+
+  .service-item__icon svg {
+    width: 16px; height: 16px;
+    stroke: rgba(255,255,255,0.45);
+    fill: none;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .service-item__title {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .service-item__text {
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    line-height: 1.85;
+    color: rgba(255,255,255,0.42);
+  }
+
+  /* ── LISTA de etapas ─────────────────────────────────── */
+
+  .steps-list {
+    list-style: none;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .steps-list li {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .steps-list li:last-child { border-bottom: none; }
+
+  .steps-list__num {
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #d4a017;
+    width: 22px;
+    flex-shrink: 0;
+    text-align: right;
   }
   
-  .about-section h1{
-      color: #fff;
-      font-size: 30px;
-      font-weight: 300;
-      letter-spacing: 4px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      margin-top: 20px;
-  }
-  
-  .about-section h2{
-      color: #fff;
-      font-size: 20px;
-      font-weight: 300;
-      letter-spacing: 3px;
-      margin-bottom: 20px;
-      margin-top: 30px;
-  }
-  
-  .about-section p{
-      color: #fff;
-      font-size: 16px;
-      font-weight: 300;
-      letter-spacing: 1px;
-      margin-bottom: 30px;
-  }
-  
-  .about-section ul{
-      list-style: none;
-      padding: 0;
-      justify-content: center;
-      margin-top: -15px;
-  }
-  
-  .about-section li{
-      color: #fff;
-      font-size: 16px;
-      font-weight: 300;
-      letter-spacing: 1px;
-      margin-bottom: 2px;
-      
-  }
   
   /* RODAPÉ */
   
