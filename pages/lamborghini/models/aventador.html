@@ -3,63 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Huracán EVO — Lamborghini · HyperCars</title>
+  <title>HyperCars</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Porsche+Next:wght@100;200;300;400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="../../../css/style-modelos.css">
 </head>
-
+<style>
+    .section-hero{
+        background-image: url('../../../img/Lamborghini/lamborghini-huracan-04.jpg');
+    }
+</style>
 <body>
 
   <!-- ── NAVBAR ─────────────────────────────────────────── -->
-  <nav class="navbar">
-    <a class="navbar-brand" href="../../index.html">
-      <img src="../../img/logo01.png" alt="HyperCars">
-      HYPERCARS
-    </a>
-
-    <div class="hc-drawer" id="hcDrawer">
-      <button class="hc-close" onclick="toggleMenu()" aria-label="Fechar menu">✕</button>
-      <ul>
-        <li><a href="../../index.html">Início</a></li>
-        <li><a href="../../index.html#marcas">Marcas</a></li>
-        <li><a href="../../pages/modelos.html">Modelos</a></li>
-        <li><a href="../../index.html#sobre">Sobre</a></li>
-      </ul>
-    </div>
-
-    <button class="hc-toggler" onclick="toggleMenu()" aria-label="Abrir menu">
-      <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
-        <line x1="0" y1="1"  x2="18" y2="1"  stroke="white" stroke-width="1.5"/>
-        <line x1="0" y1="7"  x2="18" y2="7"  stroke="white" stroke-width="1.5"/>
-        <line x1="0" y1="13" x2="18" y2="13" stroke="white" stroke-width="1.5"/>
-      </svg>
-    </button>
-  </nav>
 
   <main>
+    <section class="section-hero">
+        <nav class="navbar">
+            <a class="navbar-brand" href="../../index.html">
+            <img src="../../../img/logo01.png">
+            HYPERCARS
+            </a>
 
-    <!-- ── BREADCRUMB ──────────────────────────────────── -->
-    <div class="breadcrumb-bar">
-      <a href="../../index.html">HyperCars</a>
-      <span class="sep">›</span>
-      <a href="../../pages/lamborghini/lamborghini.html">Lamborghini</a>
-      <span class="sep">›</span>
-      <span class="current">Huracán EVO</span>
-    </div>
+            <div class="hc-drawer" id="hcDrawer">
+            <button class="hc-close" onclick="toggleMenu()" aria-label="Fechar menu">✕</button>
+            <ul>
+                <li><a href="../../../index.html">Início</a></li>
+                <li><a href="../../../index.html#marcas">Marcas</a></li>
+                <li><a href="../../../pages/modelos.html">Modelos</a></li>
+                <li><a href="../../../index.html#sobre">Sobre</a></li>
+            </ul>
+            </div>
 
-    <!-- ── HERO ───────────────────────────────────────── -->
-    <section class="model-hero" aria-label="Lamborghini Huracán EVO">
-      <div class="model-hero__bg" id="heroBg"></div>
-      <div class="model-hero__vignette"></div>
-      <div class="model-hero__content">
-        <span class="model-hero__eyebrow">Lamborghini · 2019</span>
-        <h1 class="model-hero__name">Huracán EVO</h1>
-        <p class="model-hero__tagline">5.2L V10 · 640 cv · Posteriore</p>
-      </div>
+            <button class="hc-toggler" onclick="toggleMenu()" aria-label="Abrir menu">
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+                <line x1="0" y1="1"  x2="18" y2="1"  stroke="white" stroke-width="1.5"/>
+                <line x1="0" y1="7"  x2="18" y2="7"  stroke="white" stroke-width="1.5"/>
+                <line x1="0" y1="13" x2="18" y2="13" stroke="white" stroke-width="1.5"/>
+            </svg>
+            </button>
+        </nav>
+
+        <!-- ── HERO ───────────────────────────────────────── -->
+        <section class="model-hero" aria-label="Lamborghini Huracán EVO">
+        <div class="model-hero__bg" id="heroBg"></div>
+        <div class="model-hero__vignette"></div>
+        <div class="model-hero__content">
+            <span class="model-hero__eyebrow">Lamborghini · 2019</span>
+            <h1 class="model-hero__name">Huracán EVO</h1>
+            <p class="model-hero__tagline">5.2L V10 · 640 cv · Posteriore</p>
+        </div>
+        </section>
     </section>
-
     <!-- ── SPECS + GALERIA ─────────────────────────────── -->
     <section class="detail-section">
       <div class="detail-layout">
@@ -243,20 +239,20 @@
           <div class="gallery-main" id="galleryMain">
             <img
               id="mainImg"
-              src="../../img/Lamborghini/huracan-evo-01.jpg"
-              alt="Lamborghini Huracán EVO — vista principal"
+              src="../../../img/Lamborghini/lamborghini-huracan-01.jpg"
+              alt="Lamborghini Huracán EVO — vista"
             >
           </div>
 
           <div class="gallery-thumbs" id="galleryThumbs">
             <div class="gallery-thumb active" data-index="0">
-              <img src="../../img/Lamborghini/huracan-evo-01.jpg" alt="Huracán EVO — vista 1">
+              <img src="../../../img/Lamborghini/lamborghini-huracan-02.jpg" alt="Huracán EVO — vista 1">
             </div>
             <div class="gallery-thumb" data-index="1">
-              <img src="../../img/Lamborghini/huracan-evo-02.jpg" alt="Huracán EVO — vista 2">
+              <img src="../../../img/Lamborghini/lamborghini-huracan-03.jpg" alt="Huracán EVO — vista 2">
             </div>
             <div class="gallery-thumb" data-index="2">
-              <img src="../../img/Lamborghini/huracan-evo-03.jpg" alt="Huracán EVO — vista 3">
+              <img src="../../../img/Lamborghini/lamborghini-huracan-04.jpg" alt="Huracán EVO — vista 3">
             </div>
           </div>
         </div>
@@ -414,9 +410,9 @@
 
     /* ── Galeria: troca de imagem ────────────────────────── */
     const images = [
-      '../../img/Lamborghini/huracan-evo-01.jpg',
-      '../../img/Lamborghini/huracan-evo-02.jpg',
-      '../../img/Lamborghini/huracan-evo-03.jpg'
+      '../../../img/Lamborghini/lamborghini-huracan-02.jpg',
+      '../../../img/Lamborghini/lamborghini-huracan-03.jpg',
+      '../../../img/Lamborghini/lamborghini-huracan-04.jpg'
     ];
 
     const mainImg   = document.getElementById('mainImg');

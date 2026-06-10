@@ -15,6 +15,10 @@
     main { flex: 1; }
 
     /* ── NAVBAR ───────────────────────────────────────────── */
+    .section-hero {
+      display: flex;
+      background-size: 100%;
+    }
 
     .navbar {
       background: linear-gradient(to top, #00000000, #000000);
@@ -79,6 +83,7 @@
       justify-content: center;
       cursor: pointer;
       transition: background 0.2s;
+      
     }
     
     .hc-toggler:hover { background: rgba(255,255,255,0.14); }
@@ -136,30 +141,7 @@
     }
     
     .hc-close:hover { color: #fff; }
-    /* ── BREADCRUMB ───────────────────────────────────────── */
-
-    .breadcrumb-bar {
-      margin-top: 65px;
-      padding: 18px 64px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-    }
-
-    .breadcrumb-bar a {
-      color: rgba(255,255,255,0.3);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .breadcrumb-bar a:hover { color: rgba(255,255,255,0.7); }
-
-    .breadcrumb-bar .sep { color: rgba(255,255,255,0.15); }
-    .breadcrumb-bar .current { color: rgba(255,255,255,0.6); }
+   
 
     /* ── HERO ─────────────────────────────────────────────── */
 
@@ -171,12 +153,13 @@
       overflow: hidden;
       display: flex;
       align-items: flex-end;
+      
     }
 
     .model-hero__bg {
       position: absolute;
       inset: 0;
-      background-image: url('../../img/Lamborghini/huracan-evo-hero.jpg');
+      background-image: url('../../trabalho-final-des.web/img/Lamborghini/huracan.png');
       background-size: cover;
       background-position: center 40%;
       filter: brightness(35%) saturate(1.05);
