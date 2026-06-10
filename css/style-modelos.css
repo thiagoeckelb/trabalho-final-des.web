@@ -31,7 +31,6 @@
       top: 0%;
       display: flex;
       width: 100%;
-      
     }
     
     .navbar-brand {
@@ -44,8 +43,10 @@
       align-items: center;
     }
     
-    .navbar-brand:hover {
-      color: #ffffff;
+
+
+    .navbar-brand p{
+      font-weight: 300;
     }
     
     .navbar-brand img{
@@ -223,7 +224,7 @@
 
     /* ── SPECS ────────────────────────────────────────────── */
 
-    .specs-col {}
+    
 
     .specs-col__label {
       font-size: 10px;
@@ -349,7 +350,7 @@
 
     /* ── GALERIA ──────────────────────────────────────────── */
 
-    .gallery-col {}
+    
 
     .gallery-col__label {
       font-size: 10px;
