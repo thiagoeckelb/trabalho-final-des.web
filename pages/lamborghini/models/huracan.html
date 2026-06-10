@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HyperCars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Porsche+Next:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../css/style-modelos.css">
+</head>
+<style>
+    .section-hero{
+        background-image: url('../../../img/Lamborghini/lamborghini-huracan-04.jpg');
+    }
+</style>
+<body>
+
+  <!-- ── NAVBAR ─────────────────────────────────────────── -->
+
+  <main>
+    <section class="section-hero">
+        <nav class="navbar">
+            <a class="navbar-brand" href="../../../index.html">
+            <img src="../../../img/logo01.png">
+            HYPERCARS
+            </a>
+
+            <div class="hc-drawer" id="hcDrawer">
+            <button class="hc-close" onclick="toggleMenu()" aria-label="Fechar menu">✕</button>
+            <ul>
+                <li><a href="../../../index.html">Início</a></li>
+                <li><a href="../../../index.html#marcas">Marcas</a></li>
+                <li><a href="../../../pages/modelos.html">Modelos</a></li>
+                <li><a href="../../../index.html#sobre">Sobre</a></li>
+            </ul>
+            </div>
+
+            <button class="hc-toggler" onclick="toggleMenu()" aria-label="Abrir menu">
+            <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+                <line x1="0" y1="1"  x2="18" y2="1"  stroke="white" stroke-width="1.5"/>
+                <line x1="0" y1="7"  x2="18" y2="7"  stroke="white" stroke-width="1.5"/>
+                <line x1="0" y1="13" x2="18" y2="13" stroke="white" stroke-width="1.5"/>
+            </svg>
+            </button>
+        </nav>
+
+        <!-- ── HERO ───────────────────────────────────────── -->
+        <section class="model-hero" aria-label="Lamborghini Huracán EVO">
+        <div class="model-hero__bg" id="heroBg"></div>
+        <div class="model-hero__vignette"></div>
+        <div class="model-hero__content">
+            <span class="model-hero__eyebrow">Lamborghini · 2019</span>
+            <h1 class="model-hero__name">Huracán EVO</h1>
+            <p class="model-hero__tagline">5.2L V10 · 640 cv · Posteriore</p>
+        </div>
+        </section>
+    </section>
+    <!-- ── SPECS + GALERIA ─────────────────────────────── -->
+    <section class="detail-section">
+      <div class="detail-layout">
+
+        <!-- SPECS -->
+        <div class="specs-col">
+          <p class="specs-col__label">Ficha Técnica</p>
+          <h2 class="specs-col__title">Dados do Veículo</h2>
+
+          <ul class="spec-list">
+
+            <li class="spec-item">
+              <div class="spec-icon">
+                <!-- velocímetro -->
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="13" r="9"/>
+                  <path d="M12 13l4.5-4.5"/>
+                  <circle cx="12" cy="13" r="1" fill="rgba(255,255,255,0.5)" stroke="none"/>
+                  <path d="M3.5 13a8.5 8.5 0 0 1 1.3-4.5M20.5 13a8.5 8.5 0 0 0-1.3-4.5"/>
+                </svg>
+              </div>
+              <div class="spec-info">
+                <span class="spec-info__label">Velocidade Máxima</span>
+                <span class="spec-info__value">325 <span>km/h</span></span>
+              </div>
+            </li>
+
+            <li class="spec-item">
+              <div class="spec-icon">
+                <!-- cronômetro -->
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="13.5" r="8"/>
+                  <path d="M12 9.5v4l2.5 2.5"/>
+                  <path d="M9.5 3h5M12 3v2.5"/>
+                  <path d="M19.5 7l-1.5 1.5"/>
+                </svg>
+              </div>
+              <div class="spec-info">
+                <span class="spec-info__label">Aceleração 0–100 km/h</span>
+                <span class="spec-info__value">2.9 <span>segundos</span></span>
+              </div>
+            </li>
+
+            <li class="spec-item">
+              <div class="spec-icon">
+                <!-- motor / pistão -->
+                <svg viewBox="0 0 24 24">
+                  <rect x="7" y="2" width="10" height="10" rx="1"/>
+                  <path d="M9 12v5M15 12v5"/>
+                  <path d="M6 17h12"/>
+                  <path d="M8 22h8"/>
+                  <path d="M7 6H5M19 6h-2"/>
+                </svg>
+              </div>
+              <div class="spec-info">
+                <span class="spec-info__label">Motor</span>
+                <span class="spec-info__value">V10 <span>aspirado natural</span></span>
+              </div>
+            </li>
+
+            <li class="spec-item">
+              <div class="spec-icon">
+                <!-- cilindradas -->
+                <svg viewBox="0 0 24 24">
+                  <ellipse cx="12" cy="6" rx="8" ry="3"/>
+                  <path d="M4 6v12c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/>
+                  <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/>
+                </svg>
+              </div>
+              <div class="spec-info">
+                <span class="spec-info__label">Cilindrada</span>
+                <span class="spec-info__value">5.204 <span>cc</span></span>
+              </div>
+            </li>
+
+            <li class="spec-item">
+              <div class="spec-icon">
+                <!-- potência -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M13 2L4.09 12.97A1 1 0 0 0 5 14.5h6.5L11 22l8.91-10.97A1 1 0 0 0 19 9.5H12.5L13 2z"/>
+                </svg>
+              </div>
+              <div class="spec-info">
+                <span class="spec-info__label">Potência</span>
+                <span class="spec-info__value">640 <span>cv @ 8.000 rpm</span></span>
+              </div>
+            </li>
+
+            <li class="spec-item">
+              <div class="spec-icon">
+                <!-- torque -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 12a8 8 0 1 1 16 0"/>
+                  <path d="M4 12l2-2M4 12l2 2"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+              </div>
+              <div class="spec-info">
+                <span class="spec-info__label">Torque</span>
+                <span class="spec-info__value">600 <span>Nm @ 6.500 rpm</span></span>
+              </div>
+            </li>
+
+            <li class="spec-item">
+              <div class="spec-icon">
+                <!-- câmbio -->
+                <svg viewBox="0 0 24 24">
+                  <circle cx="5"  cy="6"  r="2"/>
+                  <circle cx="12" cy="6"  r="2"/>
+                  <circle cx="19" cy="6"  r="2"/>
+                  <circle cx="5"  cy="18" r="2"/>
+                  <circle cx="12" cy="18" r="2"/>
+                  <path d="M5 8v8M12 8v3M19 8v3M8 18h4"/>
+                  <path d="M16 14l3 4-3 4"/>
+                </svg>
+              </div>
+              <div class="spec-info">
+                <span class="spec-info__label">Câmbio</span>
+                <span class="spec-info__value">DCT <span>7 velocidades</span></span>
+              </div>
+            </li>
+
+            <li class="spec-item">
+              <div class="spec-icon">
+                <!-- tração -->
+                <svg viewBox="0 0 24 24">
+                  <circle cx="5"  cy="17" r="3"/>
+                  <circle cx="19" cy="17" r="3"/>
+                  <path d="M5 14V9l5-5h7l2 5v5"/>
+                  <path d="M8 14h8"/>
+                </svg>
+              </div>
+              <div class="spec-info">
+                <span class="spec-info__label">Tração</span>
+                <span class="spec-info__value">AWD <span>integral ativa</span></span>
+              </div>
+            </li>
+
+            <li class="spec-item">
+              <div class="spec-icon">
+                <!-- massa -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 21l6-17 6 17"/>
+                  <path d="M8.5 15h7"/>
+                </svg>
+              </div>
+              <div class="spec-info">
+                <span class="spec-info__label">Massa em Ordem de Marcha</span>
+                <span class="spec-info__value">1.422 <span>kg</span></span>
+              </div>
+            </li>
+
+            <li class="spec-item" style="border-bottom: none;">
+              <div class="spec-icon">
+                <!-- calendário / ano -->
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <path d="M16 2v4M8 2v4M3 10h18"/>
+                  <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+                </svg>
+              </div>
+              <div class="spec-info">
+                <span class="spec-info__label">Ano de Lançamento</span>
+                <span class="spec-info__value">2019</span>
+              </div>
+            </li>
+
+          </ul>
+
+          <span class="spec-badge spec-badge--available" aria-label="Disponível para encomenda">
+            <span class="spec-badge-dot"></span>
+            Disponível para Encomenda
+          </span>
+        </div>
+
+        <!-- GALERIA -->
+        <div class="gallery-col">
+          <p class="gallery-col__label">Galeria</p>
+          <h2 class="gallery-col__title">Visualização</h2>
+
+          <div class="gallery-main" id="galleryMain">
+            <img
+              id="mainImg"
+              src="../../../img/Lamborghini/lamborghini-huracan-01.jpg"
+              alt="Lamborghini Huracán EVO — vista"
+            >
+          </div>
+
+          <div class="gallery-thumbs" id="galleryThumbs">
+            <div class="gallery-thumb active" data-index="0">
+              <img src="../../../img/Lamborghini/lamborghini-huracan-02.jpg" alt="Huracán EVO — vista 1">
+            </div>
+            <div class="gallery-thumb" data-index="1">
+              <img src="../../../img/Lamborghini/lamborghini-huracan-03.jpg" alt="Huracán EVO — vista 2">
+            </div>
+            <div class="gallery-thumb" data-index="2">
+              <img src="../../../img/Lamborghini/lamborghini-huracan-04.jpg" alt="Huracán EVO — vista 3">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── DIVISOR ─────────────────────────────────────── -->
+    <div class="section-divider" role="separator"></div>
+
+    <!-- ── FORMULÁRIO DE ENCOMENDA ─────────────────────── -->
+    <section class="order-section" id="encomenda">
+      <div class="order-section__header">
+        <p class="order-section__label">Aquisição · Huracán EVO</p>
+        <h2 class="order-section__title">Solicitar Encomenda</h2>
+        <p class="order-section__sub">
+          Preencha o formulário e um consultor HyperCars entrará em contato para iniciar o processo de importação personalizada.
+        </p>
+      </div>
+
+      <form class="order-form" id="orderForm" novalidate>
+
+        <!-- Nome completo -->
+        <div class="form-group">
+          <label class="form-label" for="nome">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
+            </svg>
+            Nome Completo <span class="req">*</span>
+          </label>
+          <input
+            class="form-input"
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Seu nome completo"
+            required
+            autocomplete="name"
+          >
+        </div>
+
+        <!-- E-mail -->
+        <div class="form-group">
+          <label class="form-label" for="email">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 8l10 7 10-7"/>
+            </svg>
+            E-mail <span class="req">*</span>
+          </label>
+          <input
+            class="form-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seu@email.com"
+            required
+            autocomplete="email"
+          >
+        </div>
+
+        <!-- Telefone -->
+        <div class="form-group">
+          <label class="form-label" for="telefone">
+            <svg viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.07 6.07l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Telefone / WhatsApp <span class="req">*</span>
+          </label>
+          <input
+            class="form-input"
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="+55 (00) 00000-0000"
+            required
+            autocomplete="tel"
+          >
+        </div>
+
+        <!-- Preferência de contato -->
+        <div class="form-group">
+          <label class="form-label" for="contato">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 8v4l3 3"/>
+            </svg>
+            Melhor Horário para Contato
+          </label>
+          <input
+            class="form-input"
+            type="text"
+            id="contato"
+            name="contato"
+            placeholder="Ex: Manhã, das 9h às 12h"
+            autocomplete="off"
+          >
+        </div>
+
+        <!-- Mensagem — full width -->
+        <div class="form-group form-group--full">
+          <label class="form-label" for="mensagem">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Descrição / Observações <span class="req">*</span>
+          </label>
+          <textarea
+            class="form-textarea"
+            id="mensagem"
+            name="mensagem"
+            placeholder="Descreva seus interesses, cor desejada, configuração especial, prazo estimado ou qualquer outra informação relevante."
+            required
+          ></textarea>
+        </div>
+
+        <!-- Botão + aviso -->
+        <div class="form-submit-row">
+          <button class="form-btn" type="submit">Enviar Solicitação</button>
+          <p class="form-notice">
+            Campos marcados com <span style="color:#d4a017;">*</span> são obrigatórios.<br>
+            Seus dados são tratados com total confidencialidade.
+          </p>
+        </div>
+
+        <!-- Feedback pós-envio -->
+        <div class="form-feedback" id="formFeedback" role="alert">
+          ✓ &nbsp; Solicitação enviada com sucesso. Entraremos em contato em breve.
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 HyperCars. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    /* ── Menu drawer ─────────────────────────────────────── */
+    function toggleMenu() {
+      document.getElementById('hcDrawer').classList.toggle('open');
+    }
+
+    /* ── Parallax hero ───────────────────────────────────── */
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y < window.innerHeight) {
+        heroBg.style.transform = `translateY(${y * 0.16}px)`;
+      }
+    }, { passive: true });
+
+    /* ── Galeria: troca de imagem ────────────────────────── */
+    const images = [
+      '../../../img/Lamborghini/lamborghini-huracan-02.jpg',
+      '../../../img/Lamborghini/lamborghini-huracan-03.jpg',
+      '../../../img/Lamborghini/lamborghini-huracan-04.jpg'
+    ];
+
+    const mainImg   = document.getElementById('mainImg');
+    const thumbs    = document.querySelectorAll('.gallery-thumb');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const idx = parseInt(thumb.dataset.index, 10);
+
+        /* fade na imagem principal */
+        mainImg.style.opacity = '0';
+        mainImg.style.transform = 'scale(1.03)';
+
+        setTimeout(() => {
+          mainImg.src = images[idx];
+          mainImg.alt = `Lamborghini Huracán EVO — vista ${idx + 1}`;
+          mainImg.style.opacity = '1';
+          mainImg.style.transform = 'scale(1)';
+        }, 220);
+
+        /* destaque na miniatura */
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+    });
+
+    /* ── Formulário ──────────────────────────────────────── */
+    const form     = document.getElementById('orderForm');
+    const feedback = document.getElementById('formFeedback');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = 'rgba(248,113,113,0.6)';
+          field.style.boxShadow   = '0 0 0 1px rgba(248,113,113,0.2)';
+
+          field.addEventListener('input', function reset() {
+            field.style.borderColor = '';
+            field.style.boxShadow   = '';
+            field.removeEventListener('input', reset);
+          });
+        }
+      });
+
+      if (!valid) return;
+
+      /* Simula envio ─ substitua por fetch() para integração real */
+      const btn = form.querySelector('.form-btn');
+      btn.textContent = 'Enviando…';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        feedback.style.display = 'block';
+        form.querySelectorAll('.form-input, .form-textarea').forEach(f => f.value = '');
+        btn.textContent = 'Enviado';
+      }, 900);
+    });
+  </script>
+
+</body>
+</html>
