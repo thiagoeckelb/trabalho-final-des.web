@@ -47,6 +47,7 @@ main { flex: 1; }
   font-size: 20px;
   display: flex;
   align-items: center;
+  font-weight: 300;
 }
 
 .navbar-brand:hover {
@@ -160,7 +161,6 @@ main { flex: 1; }
 .brand-hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('../../../img/Lamborghini/lamborghini-aventador03.jpg');
   background-size: cover;
   background-position: center 30%;
   filter: brightness(38%) saturate(1.1);
