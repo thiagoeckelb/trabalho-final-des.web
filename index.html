@@ -38,9 +38,11 @@
             </nav>
             <!-- BANNER -->
             <div class="mx-carousel-wrapper">
-        
+                <div class="mx-content" id="mxcontent"  data-min="0" data-max="450">
+                    <h2>Navegue pela excelência</h2>
+                    <p>Escolha a sua marca</p>
+                </div>
                 <div class="mx-slides">
-            
                     <div class="mx-slide active">
                         <a href="#"><img src="../../../img/Lamborghini/lamborghini-aventador03.jpg"></a>
                         <div class="mx-overlay"></div>
@@ -89,7 +91,11 @@
 
         </section>
         <!-- GRID MARCAS -->
-        <div id="marcas"></div><br><br><br><br>
+        <div class="title" id="marcas">
+            <h2>Navegue pela excelência</h2>
+            <p>Escolha a sua marca</p>
+        </div>
+        <div></div><br>
             <div class="grid-cards">
                 <a href="../../../pages/lamborghini/lamborghini.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../../img/Lamborghini/logo.png" style="width: 200px; height: auto ;"></button></a>
                 <a href="../../../pages/ferrari/ferrari.html"><button type="button" style="width: 220px; height: 220px;background-color:black;" class="card"><img src="../../../img/Ferrari/logo.png" style="width: 200px; height: auto ;"></button></a>
@@ -144,14 +150,14 @@
             </div>
             <div>
                 <!-- Botão 2: aparece entre 800-1200px, vai para #sobre -->
-                <a id="scrollBtn" href="#sobre" class="scroll-link" data-destino="sobre" data-min="800" data-max="1200" style="margin: 0;">
+                <a id="scrollBtn" href="#sobre" class="scroll-link" data-destino="sobre" data-min="800" data-max="1800" style="margin: 0;">
                    <p style="padding: 0px 15px 0px;margin: 0;">Sobre</p><br>
                    <span style="display: inline-block;transform: rotate(90deg);font-size: 30px;font-weight: 100;margin-top: -20px;">&#10095;</span>
                 </a>
             </div>
             <div> 
                 <!-- Botão 3: Subir ao topo -->
-                <a id="scrollBtn" href="#main" class="scroll-link2" data-destino="main" data-min="1800" data-max="2200" style="margin: 0;">
+                <a id="scrollBtn" href="#main" class="scroll-link2" data-destino="main" data-min="2300" data-max="2700" style="margin: 0;">
                      <span style="display: inline-block;transform: rotate(270deg);font-size: 30px;font-weight: 100;margin: 0;">&#10095;</span><br>
                      <p style="padding: 0px 15px 5px;">Topo</p>
                 </a>
@@ -224,14 +230,17 @@
                 function toggleMenu() {
                 document.getElementById('hcDrawer').classList.toggle('open');
                 }
+                
 
-                /* LINK FIXO */
-            
+                // 1. Seleção dos elementos da página
                 const botoes = document.querySelectorAll("#scrollBtn");
+                const elementosTexto = document.querySelectorAll("#mxcontent");
 
-                function atualizarBotoes() {
+                // 2. Função única que gerencia tudo que depende do Scroll
+                function gerenciarScroll() {
                     const scrollAtual = window.scrollY;
 
+                    // LÓGICA DOS BOTÕES (Aparecer / Sumir)
                     botoes.forEach(function(btn) {
                         const min = Number(btn.dataset.min);
                         const max = Number(btn.dataset.max);
@@ -242,22 +251,39 @@
                             btn.classList.add("hide");
                         }
                     });
+
+                    // LÓGICA DO TEXTO (Deslizar da esquerda para a direita)
+                    elementosTexto.forEach(function(el) {
+                        const min02 = Number(el.dataset.min);
+                        const max02 = Number(el.dataset.max);
+
+                        // CORREÇÃO: Adiciona a classe dentro da faixa de scroll, remove fora dela
+                        if (scrollAtual >= min02 && scrollAtual <= max02) {
+                            el.classList.add("mostrar-texto");
+                        } else {
+                            el.classList.remove("mostrar-texto");
+                        }
+                    });
                 }
 
-                /* clique */
+                // 3. Configuração do clique suave nos botões
                 botoes.forEach(function(btn) {
                     btn.addEventListener("click", function(e) {
                         e.preventDefault();
                         const destino = document.getElementById(btn.dataset.destino);
-                        destino.scrollIntoView({ behavior: "smooth" });
+                        if (destino) {
+                            destino.scrollIntoView({ behavior: "smooth" });
+                        }
                     });
                 });
 
-                /* roda no scroll e no carregamento da página */
-                window.addEventListener("scroll", atualizarBotoes);
-                document.addEventListener("DOMContentLoaded", atualizarBotoes);
+                // 4. Executa a função nos eventos de Scroll e Carregamento da página
+                window.addEventListener("scroll", gerenciarScroll);
+                document.addEventListener("DOMContentLoaded", gerenciarScroll);
+
 
             </script>
+         
     </main>
             <footer>
                 <p>© 2026 HyperCars. Todos os direitos reservados.</p>

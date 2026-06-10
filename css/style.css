@@ -14,6 +14,7 @@
     margin: 0;
     display: flex;
     flex-direction:column;
+    
   }
   
   main{
@@ -41,6 +42,26 @@
   
       z-index:-1;
   }
+
+  .title{
+    font-weight: 1;
+    letter-spacing: 4px;
+    text-decoration: none;
+    text-align: center;
+    padding: 120px 0px 0px;
+    
+  }
+
+  .title h2{
+    font-weight: 300;
+    font-size: 50px;
+    padding: 0px 0px 10px;
+  }
+
+  .title p{
+    font-size: 20px;
+  }
+
   /* NAVBAR */
   
   .navbar {
@@ -303,6 +324,7 @@
     display: flex;
     justify-content: center;
     
+    
   }
   
   .mx-carousel-wrapper {
@@ -313,12 +335,14 @@
     overflow: hidden;
     border-radius: 0px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    
   }
   
   .mx-slides {
     display: flex;
     height: 100%;
     transition: transform 0.8s ease;
+    
   }
   
   .mx-slide {
@@ -343,25 +367,59 @@
   }
   
   .mx-content {
-    position: absolute;
-    bottom: 60px;
-    left: 60px;
+    position: fixed;
+    bottom: 0px;
+    top: 70%;
+    
     color: white;
     z-index: 2;
+    padding: 40px 64px 40px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+    letter-spacing: 3px;
   }
   
   .mx-content h2 {
     font-size: 3rem;
     margin-bottom: 10px;
+    color: white;
+    font-weight: 1;
+    text-transform: uppercase;
+   
   }
+
+  .mx-content p{
+    font-size: 1.9rem;
+    color: white;
+    font-weight: 1;
+  
+  }
+  /* Estado Inicial: Escondido e deslocado para baixo */
+  #mxcontent {
+      opacity: 0;
+      transform: translateX(72%);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      text-align: center;
+  }
+  
+  /* Estado Ativo (adicionado pelo JavaScript): Visível e na posição original */
+  #mxcontent.mostrar-texto {
+      opacity: 1;
+      transform: translateX(72%);
+      text-align: center;
+  }
+  
+
   
   .mx-controls {
     position: absolute;
     bottom: 30px;
-    right: 45%;
+    left: 50%;
     display: flex;
     gap: 10px;
     z-index: 5;
+    transform: translate(-50%, -50%);
   }
   
   .mx-btn {
@@ -414,7 +472,11 @@
           grid-template-columns:repeat(5, 220px);
           gap:20px;
           justify-content:center;
+          margin-top: 0;
           margin:10px;
+          padding: 0px 100px 200px;
+          
+          
       }
   
       .card{
@@ -583,6 +645,7 @@
       justify-content: center;
       display: block;
       margin: 100px;
+      
   }
   
   .about-section h1{
@@ -632,10 +695,12 @@
   
   footer {
     background: linear-gradient(to top, #0f0f10, #0f0f1000);
-    color: #fff; 
-    text-align:center;
-    padding: 20px 0;
-    
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+    padding: 28px 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
   }
   
   

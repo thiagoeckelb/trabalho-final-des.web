@@ -1,10 +1,9 @@
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box;}
 
     html { scroll-behavior: smooth; }
 
     body {
       background: #000;
-      font-family: 'Porsche Next', 'Helvetica Neue', Arial, sans-serif;
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -13,6 +12,28 @@
     }
 
     main { flex: 1; }
+
+    /* TEXTOS */
+    .section-hero span{
+      font-family: 'Porsche Next', 'Helvetica Neue', Arial, sans-serif;
+    }
+  
+    .section-hero h1{
+      font-family: 'Porsche Next', 'Helvetica Neue', Arial, sans-serif;
+    }
+  
+    .section-hero p{
+      font-family: 'Porsche Next', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .detail-section{
+      font-family: 'Porsche Next', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .order-section{
+      font-family: 'Porsche Next', 'Helvetica Neue', Arial, sans-serif;
+    }
+
 
     /* NAVBAR */
     .section-hero {
@@ -31,8 +52,8 @@
       transform: translate(-50%, -50%); /* Centraliza */
       z-index: -1;
       object-fit: cover; /* Faz o vídeo cobrir todo o espaço sem distorcer */
-      
   }
+  
 
     .navbar {
       background: linear-gradient(to top, #00000000, #000000);
@@ -49,7 +70,7 @@
     
     .navbar-brand {
       color: #ffffff;
-      font-weight: 300;
+      font-weight: 100;
       letter-spacing: 4px;
       text-transform: uppercase;
       font-size: 20px;
@@ -661,6 +682,7 @@
       font-size: 12px;
       letter-spacing: 1px;
       font-weight: 300;
+      font-family: 'Porsche Next', 'Helvetica Neue', Arial, sans-serif;
     }
 
     /* ── RESPONSIVO ───────────────────────────────────────── */
