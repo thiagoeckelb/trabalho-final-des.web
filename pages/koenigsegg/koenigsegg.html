@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Koenigsegg — HyperCars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Porsche+Next:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style-marcas.css">
+    <style>
+      .brand-hero__bg{
+      background-image: url("../../img/Koenigsegg/jesko04.jpg");
+      }
+    </style>
+</head>
+<body>
+
+  <!-- NAVBAR  -->
+  
+
+  <main>
+
+    <!-- HERO-->
+    <section class="brand-hero" aria-label="Aston Martin">
+        <nav class="navbar">
+            <a class="navbar-brand" href="../../index.html">
+              <img src="../../img/logo01.png" alt="HyperCars">
+              HYPERCARS
+            </a>
+        
+            <div class="hc-drawer" id="hcDrawer">
+              <button class="hc-close" onclick="toggleMenu()" aria-label="Fechar menu">✕</button>
+              <ul>
+                <li><a href="../../index.html">Início</a></li>
+                <li><a href="../../index.html#marcas">Marcas</a></li>
+                <li><a href="../../pages/modelos.html">Modelos</a></li>
+                <li><a href="../../index.html#sobre">Sobre</a></li>
+              </ul>
+            </div>
+        
+            <button class="hc-toggler" onclick="toggleMenu()" aria-label="Abrir menu">
+              <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+                <line x1="0" y1="1"  x2="18" y2="1"  stroke="white" stroke-width="1.5"/>
+                <line x1="0" y1="7"  x2="18" y2="7"  stroke="white" stroke-width="1.5"/>
+                <line x1="0" y1="13" x2="18" y2="13" stroke="white" stroke-width="1.5"/>
+              </svg>
+            </button>
+          </nav>
+      <div class="brand-hero__bg" id="heroBg"></div>
+      <div class="brand-hero__vignette"></div>
+
+      <div class="brand-hero__content">
+        <span class="brand-hero__eyebrow">Marca · Koenigsegg · Ängelholm, 1994</span>
+        <img
+          src="../../img/Koenigsegg/logo.png"
+          alt="Lamborghini"
+          class="brand-hero__logo"
+        >
+        <div class="brand-hero__accent"></div>
+        <h1 class="brand-hero__title">Koenigsegg</h1>
+        <p class="brand-hero__subtitle">
+            Inovação sem limites. Performance sem igual.
+        </p>
+      </div>
+
+      <div class="brand-hero__scroll" aria-hidden="true">
+        <div class="brand-hero__scroll-line"></div>
+        <span>Modelos</span>
+      </div>
+    </section>
+
+    <!--MODELOS-->
+    <section class="models-section" id="modelos">
+        <div class="models-section__header">
+            <div>
+            <p class="models-section__label">Seleção · Koenigsegg</p>
+            <h2 class="models-section__title">Modelos</h2>
+            </div>
+            <span class="models-section__count">03 Veículos</span>
+        </div>
+
+        <div class="model-grid">
+
+        <!--CARD 1-->
+        <article class="model-card">
+          <div class="model-card__img-wrap">
+            <img
+              src="../../img/Koenigsegg/jesko03.jpg"
+              alt="Jesko"
+              loading="lazy"
+            >
+            <div class="model-card__img-overlay"></div>
+          </div>
+          <div class="model-card__body">
+            <span class="model-card__brand">koenigsegg</span>
+            <h3 class="model-card__name">jesko</h3>
+            <div class="model-card__divider"></div>
+            <ul class="model-card__specs" aria-label="Especificações">
+              <li class="model-card__spec">
+                <span class="model-card__spec-icon">
+                  <!-- Ícone: velocímetro / topo de velocidade -->
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 12m-1 0a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10"/>
+                    <path d="M12 12l4.5-4.5"/>
+                    <path d="M2 12h2M20 12h2M12 2v2"/>
+                  </svg>
+                </span>
+                <span class="model-card__spec-label">Vel. Máx.</span>
+                <span class="model-card__spec-value">531 km/h</span>
+              </li>
+              <li class="model-card__spec">
+                <span class="model-card__spec-icon">
+                  <!-- Ícone: cronômetro / aceleração -->
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="13" r="8"/>
+                    <path d="M12 9v4l2.5 2.5"/>
+                    <path d="M9.5 3h5"/>
+                    <path d="M12 3v2"/>
+                  </svg>
+                </span>
+                <span class="model-card__spec-label">0–100 km/h</span>
+                <span class="model-card__spec-value">2.5 s</span>
+              </li>
+            </ul>
+            <span class="model-card__badge model-card__badge--available" aria-label="Disponível">
+              <span class="model-card__badge-dot"></span>
+              Disponível
+            </span>
+          </div>
+        </article>
+
+        <!--CARD 2-->
+        <article class="model-card">
+          <div class="model-card__img-wrap">
+            <img
+              src="../../img/Koenigsegg/gemera02.jpg"
+              alt="Koenigsegg Gemera"
+              loading="lazy"
+            >
+            <div class="model-card__img-overlay"></div>
+          </div>
+          <div class="model-card__body">
+            <span class="model-card__brand">Koenigsegg</span>
+            <h3 class="model-card__name">Gemera</h3>
+            <div class="model-card__divider"></div>
+            <ul class="model-card__specs" aria-label="Especificações">
+              <li class="model-card__spec">
+                <span class="model-card__spec-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 12m-1 0a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10"/>
+                    <path d="M12 12l4.5-4.5"/>
+                    <path d="M2 12h2M20 12h2M12 2v2"/>
+                  </svg>
+                </span>
+                <span class="model-card__spec-label">Vel. Máx.</span>
+                <span class="model-card__spec-value">400 km/h</span>
+              </li>
+              <li class="model-card__spec">
+                <span class="model-card__spec-icon">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="13" r="8"/>
+                    <path d="M12 9v4l2.5 2.5"/>
+                    <path d="M9.5 3h5"/>
+                    <path d="M12 3v2"/>
+                  </svg>
+                </span>
+                <span class="model-card__spec-label">0–100 km/h</span>
+                <span class="model-card__spec-value">1.9 s</span>
+              </li>
+            </ul>
+            <span class="model-card__badge model-card__badge--available" aria-label="Disponível">
+                <span class="model-card__badge-dot"></span>
+                Disponível
+              </span>
+          </div>
+        </article>
+
+        <!--CARD 3-->
+        <article class="model-card">
+          <div class="model-card__img-wrap">
+            <img
+              src="../../img/Koenigsegg/CC850-01.jpg"
+              alt="Koenigsegg CC850"
+              loading="lazy"
+            >
+            <div class="model-card__img-overlay"></div>
+          </div>
+          <div class="model-card__body">
+            <span class="model-card__brand">Koenigsegg</span>
+            <h3 class="model-card__name">CC850</h3>
+            <div class="model-card__divider"></div>
+            <ul class="model-card__specs" aria-label="Especificações">
+              <li class="model-card__spec">
+                <span class="model-card__spec-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 12m-1 0a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10"/>
+                    <path d="M12 12l4.5-4.5"/>
+                    <path d="M2 12h2M20 12h2M12 2v2"/>
+                  </svg>
+                </span>
+                <span class="model-card__spec-label">Vel. Máx.</span>
+                <span class="model-card__spec-value">480 km/h</span>
+              </li>
+              <li class="model-card__spec">
+                <span class="model-card__spec-icon">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="13" r="8"/>
+                    <path d="M12 9v4l2.5 2.5"/>
+                    <path d="M9.5 3h5"/>
+                    <path d="M12 3v2"/>
+                  </svg>
+                </span>
+                <span class="model-card__spec-label">0–100 km/h</span>
+                <span class="model-card__spec-value">2.7 s</span>
+              </li>
+            </ul>
+            <span class="model-card__badge model-card__badge--unavailable" aria-label="Indisponível">
+                <span class="model-card__badge-dot"></span>
+                Indisponível
+              </span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 HyperCars. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // ── Menu drawer ────────────────────────────────────────
+    function toggleMenu() {
+      document.getElementById('hcDrawer').classList.toggle('open');
+    }
+
+    // ── Parallax suave no hero ─────────────────────────────
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      // Sutil: move o bg a 30% da velocidade do scroll
+      if (y < window.innerHeight) {
+        heroBg.style.transform = `scale(1.04) translateY(${y * 0.18}px)`;
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
