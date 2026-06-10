@@ -472,9 +472,9 @@
           grid-template-columns:repeat(5, 220px);
           gap:20px;
           justify-content:center;
-          margin-top: 0;
+          margin-top: 0px;
           margin:10px;
-          padding: 0px 100px 200px;
+          padding: 50px 100px 200px;
           
           
       }
